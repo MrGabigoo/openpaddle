@@ -7,7 +7,7 @@ They needed a small application for ranking players at their event that would wo
 
 Web hosting with PHP and a MySQL database being a cheap commodity nowadays, I chose to develop this application with the very lightweight and easy to use [CodeIgniter](https://codeigniter.com) web framework, in order to create a simple JSON API that would interact with a database.
 
-The frontend was written in [Vue.js](https://vuejs.org) and [jQuery](https://jquery.com), and interacts with the JSON API using [axios.js](https://github.com/axios/axios).
+The frontend was written in [Vue.js](https://vuejs.org) and [jQuery](https://jquery.com), and interacts with the JSON API using [axios.js](https://github.com/axios/axios). I also used [Sweetalert](https://sweetalert.js.org/) to make alert dialogs prettier.
 
 ### Why CodeIgniter?
 This project was somewhat time-sensitive, so I decided to use a web framework rather than having to reinvent the wheel.
