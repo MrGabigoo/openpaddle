@@ -1,0 +1,38 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `op_games`
+--
+
+CREATE TABLE `op_games` (
+  `game_id` int(11) NOT NULL,
+  `game_p1` int(11) NOT NULL,
+  `game_p2` int(11) NOT NULL,
+  `game_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `game_concluded` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for table `op_games`
+--
+ALTER TABLE `op_games`
+  ADD PRIMARY KEY (`game_id`);
+
+--
+-- AUTO_INCREMENT for table `op_games`
+--
+ALTER TABLE `op_games`
+  MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

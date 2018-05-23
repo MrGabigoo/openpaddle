@@ -1,0 +1,465 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 1, ../sass/_index.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/_index.scss */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  background: whitesmoke;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  border-bottom: solid 8px black;
+}
+/* line 14, ../sass/_index.scss */
+header .logo {
+  filter: invert(96%);
+  margin-left: 50px;
+}
+/* line 18, ../sass/_index.scss */
+header #time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+/* line 30, ../sass/_index.scss */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  font-family: 'Overpass', sans-serif;
+}
+
+/* line 39, ../sass/_index.scss */
+.button, .button-back, .button-back-2 {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 8px solid black;
+  box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+/* line 57, ../sass/_index.scss */
+.button:active, .button-back:active, .button-back-2:active {
+  transition: none;
+  opacity: 0.9;
+  transform: translate(-49%, -49%);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* line 66, ../sass/_index.scss */
+.button {
+  position: absolute;
+  top: 50%;
+  width: 300px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+/* line 77, ../sass/_index.scss */
+.button-back, .button-back-2 {
+  pointer-events: none;
+  color: white;
+  background: black;
+  transition: 0.2s;
+  opacity: 0;
+  top: 50px;
+  width: 100px;
+  height: 50px;
+  font-size: 1em;
+}
+
+/* line 93, ../sass/_index.scss */
+button {
+  font-family: Overpass;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+/* line 1, ../sass/_inscription.scss */
+.player {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 50%;
+  height: 65vh;
+  background: #8cd6ec;
+  transition: 0.2s;
+}
+/* line 9, ../sass/_inscription.scss */
+.player .form {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 200px;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.4s;
+}
+/* line 19, ../sass/_inscription.scss */
+.player input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  width: 500px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 2em;
+  font-weight: bold;
+  padding: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+/* line 34, ../sass/_inscription.scss */
+.player button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(250px, -50%);
+  height: 100px;
+  width: 100px;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 2em;
+  cursor: pointer;
+}
+/* line 46, ../sass/_inscription.scss */
+.player .form-enable {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+/* line 52, ../sass/_inscription.scss */
+.player-active {
+  width: 100% !important;
+  z-index: 9;
+}
+/* line 55, ../sass/_inscription.scss */
+.player-active .button {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  color: transparent;
+  pointer-events: none;
+}
+/* line 62, ../sass/_inscription.scss */
+.player-active .button-back, .player-active .button-back-2 {
+  pointer-events: initial;
+  opacity: 1;
+}
+
+/* line 1, ../sass/_partie.scss */
+.game {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  width: 50%;
+  height: 65vh;
+  background: #e9cfad;
+  transition: 0.2s;
+}
+/* line 9, ../sass/_partie.scss */
+.game .form {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 200px;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.4s;
+}
+/* line 19, ../sass/_partie.scss */
+.game input {
+  position: absolute;
+  top: 50%;
+  border: none;
+  width: 500px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 2em;
+  font-weight: bold;
+  padding: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+/* line 32, ../sass/_partie.scss */
+.game .input-p1 {
+  left: 50%;
+  transform: translate(-130%, -50%);
+  transition: 0.2s;
+}
+/* line 37, ../sass/_partie.scss */
+.game .input-p2 {
+  right: 50%;
+  transform: translate(130%, -50%);
+  transition: 0.2s;
+}
+/* line 42, ../sass/_partie.scss */
+.game .paddle-p1, .game .paddle-p2 {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 40px;
+  border-radius: 35px;
+  transition: 0.2s, opacity 0.4s;
+}
+/* line 49, ../sass/_partie.scss */
+.game .paddle-p1:after, .game .paddle-p2:after {
+  content: '';
+  background: #37282a;
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* line 60, ../sass/_partie.scss */
+.game .paddle-p1 {
+  transform: translate(-350%, -50%);
+  left: 50%;
+  background-color: tomato;
+}
+/* line 66, ../sass/_partie.scss */
+.game .paddle-p1-active {
+  transform: translate(10%, -70%) rotate(40deg) scale(1.5);
+}
+/* line 69, ../sass/_partie.scss */
+.game .paddle-p2 {
+  transform: translate(250%, -50%);
+  left: 50%;
+  background-color: #00a1ec;
+}
+/* line 75, ../sass/_partie.scss */
+.game .paddle-p2-active {
+  transform: translate(-110%, -70%) rotate(-40deg) scale(1.5);
+}
+/* line 78, ../sass/_partie.scss */
+.game #go-game {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0%);
+  height: 70px;
+  width: 150px;
+  border: none;
+  background: #07c100;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+/* line 92, ../sass/_partie.scss */
+.game #win-p1, .game #win-p2 {
+  position: absolute;
+  top: 50%;
+  width: 500px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 2em;
+  font-weight: bold;
+  padding: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  border: 8px solid black;
+  box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+/* line 107, ../sass/_partie.scss */
+.game #win-p1:hover, .game #win-p2:hover {
+  border-color: #2BB21C;
+  background: #2BB21C;
+  color: whitesmoke;
+}
+/* line 112, ../sass/_partie.scss */
+.game #win-p1:active, .game #win-p2:active {
+  transition: none;
+  opacity: 0.9;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+/* line 118, ../sass/_partie.scss */
+.game #win-p1 {
+  left: 50%;
+  transform: translate(-130%, -50%);
+}
+/* line 123, ../sass/_partie.scss */
+.game #win-p2 {
+  right: 50%;
+  transform: translate(130%, -50%);
+}
+/* line 128, ../sass/_partie.scss */
+.game .who-won {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+/* line 136, ../sass/_partie.scss */
+.game .form-enable {
+  opacity: 1;
+  pointer-events: initial;
+}
+/* line 140, ../sass/_partie.scss */
+.game #timer {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-size: 3em;
+  font-family: 'Wallpoet', cursive;
+  text-align: left;
+  width: 325px;
+  height: 60px;
+  padding: 7px 20px;
+  background-color: #222;
+  border: solid 2px #111;
+  color: red;
+  border-radius: 8px;
+  text-shadow: 0 0 5px red;
+  box-shadow: 0 0 10px black inset;
+  z-index: 70;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* line 164, ../sass/_partie.scss */
+.game-active {
+  width: 100% !important;
+  z-index: 9;
+}
+/* line 167, ../sass/_partie.scss */
+.game-active .button {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  color: transparent;
+  pointer-events: none;
+}
+/* line 174, ../sass/_partie.scss */
+.game-active .button-back, .game-active .button-back-2 {
+  pointer-events: initial;
+  opacity: 1;
+}
+
+/* line 179, ../sass/_partie.scss */
+.game-running {
+  z-index: 95;
+  height: 100vh;
+}
+
+/* line 1, ../sass/_classement.scss */
+.ranking {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 75vh;
+  background: #e99185;
+  z-index: 10;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+}
+/* line 12, ../sass/_classement.scss */
+.ranking::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  transform: skewY(-1deg);
+  z-index: -1;
+  background: #e99185;
+}
+/* line 24, ../sass/_classement.scss */
+.ranking .ranking-container {
+  position: absolute;
+  top: 200px;
+  bottom: 30px;
+  width: 960px;
+  overflow-y: auto;
+  transition: 0.5s;
+}
+/* line 32, ../sass/_classement.scss */
+.ranking table {
+  position: relative;
+  border: solid 8px;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 2em;
+}
+/* line 38, ../sass/_classement.scss */
+.ranking table tr {
+  border: solid 3px;
+  text-align: center;
+}
+/* line 41, ../sass/_classement.scss */
+.ranking table tr th {
+  border: solid 3px;
+}
+/* line 44, ../sass/_classement.scss */
+.ranking table tr td {
+  border: solid 3px;
+}
+
+/* line 51, ../sass/_classement.scss */
+.ranking-active {
+  top: 20vh !important;
+}
+/* line 53, ../sass/_classement.scss */
+.ranking-active .ranking-container {
+  top: 100px !important;
+}
+/* line 56, ../sass/_classement.scss */
+.ranking-active .button {
+  top: 50px;
+  width: 100px;
+  height: 50px;
+  opacity: 0;
+  color: transparent;
+  pointer-events: none;
+}
+/* line 64, ../sass/_classement.scss */
+.ranking-active .button-back-2 {
+  pointer-events: initial;
+  opacity: 1;
+}
