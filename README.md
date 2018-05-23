@@ -26,11 +26,11 @@ If you want to install openpaddle on your own server, all you need to do is foll
   * Create a database (if needed)
   * Grab the `op_games.sql` and `op_players.sql` files from `application/models/` and import them into your database
 
-##### Application setup
+##### 3. Application setup
   * Edit the database configuration file located at `application/config/database.php` and enter your database credentials
   * Edit the application's base URL used for AJAX calls in `application/views/home_view.php` on line **108**. _(Don't forget the trailing slash!)_
   
-##### Use openpaddle!
+##### 4. Use openpaddle!
 
 
 ### Contributing
