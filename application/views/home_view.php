@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body onload="startTime()">
 
 <header>
-    <div class="logo"><img src="assets/images/logo_asap.jpg" alt="logo" height="70"></div>
+    <div class="logo"><img src="assets/images/logo.png" alt="logo" height="70"></div>
     <div id="time"></div>
 </header>
 

@@ -21,7 +21,6 @@ header {
 }
 /* line 14, ../sass/_index.scss */
 header .logo {
-  filter: invert(96%);
   margin-left: 50px;
 }
 /* line 18, ../sass/_index.scss */
